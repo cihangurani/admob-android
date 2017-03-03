@@ -19,6 +19,7 @@
         <clobbers target="window.admob" />
     </js-module>
     <platform name="android">
+	    <dependency id="com.google.playservices" url="https://github.com/gkachru/google-play-services"/>
         <config-file target="res/xml/config.xml" parent="/*">
             <feature name="admob" >
                 <param name="android-package" value="com.admob.cordova.plugin.AdmobAdPlugin"/>
@@ -39,10 +40,6 @@
 			    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
         </config-file>
         <source-file src="src/android/libs/admobadplugin.jar" target-dir="libs/" />
-        <source-file src="src/android/libs/play-services-ads-9.4.0.jar" target-dir="libs/"/>
-        <source-file src="src/android/libs/play-services-ads-lite-9.4.0.jar" target-dir="libs/"/>
-        <source-file src="src/android/libs/play-services-base-9.4.0.jar" target-dir="libs/"/>
-        <source-file src="src/android/libs/play-services-basement-9.4.0.jar" target-dir="libs/"/>
         <resource-file src="src/android/res" target="res/" />
     </platform>
     <platform name="ios">
